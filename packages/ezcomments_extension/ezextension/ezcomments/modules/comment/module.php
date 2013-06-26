@@ -68,6 +68,13 @@ $ViewList['removecomments'] = array(
                    'params' => array(),
                    );
 
+$ViewList['validatecomments'] = array(
+                   'functions' => array( 'validatecomments' ),
+                   'default_navigation_part' => 'ezcontentnavigationpart',
+                   'script' => 'validatecomments.php',
+                   'params' => array(),
+                   );
+
 $SectionID = array(
     'name'=> 'ContentSection',
     'values'=> array(),
@@ -119,4 +126,6 @@ $FunctionList['security'] = array( 'AntiSpam' => $antiSpam );
 $FunctionList['list'] = array();
 
 $FunctionList['removecomments'] = array();
+
+$FunctionList['validatecomments'] = array();
 ?>

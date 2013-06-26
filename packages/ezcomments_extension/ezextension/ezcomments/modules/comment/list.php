@@ -23,6 +23,20 @@ if ( $http->hasPostVariable( 'RemoveCommentsButton' ) )
     }
 }
 
+
+if ( $http->hasPostVariable( 'ValidateCommentsButton' ) )
+{
+    if ( $http->hasPostVariable( 'DeleteIDArray' ) )
+    {
+        $deleteIDArray = $http->postVariable( 'DeleteIDArray' );
+        if ( $deleteIDArray !== null )
+        {
+            $http->setSessionVariable( 'ValidateCommentsIDArray', $deleteIDArray );
+            $Module->redirectTo( $Module->functionURI( 'validatecomments' ) . '/' );
+        }
+    }
+}
+
 $contentInfoArray = array();
 
 $tpl = eZTemplate::factory();

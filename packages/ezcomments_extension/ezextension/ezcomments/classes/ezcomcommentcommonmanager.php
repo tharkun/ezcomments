@@ -15,7 +15,7 @@
 
 class ezcomCommentCommonManager extends ezcomCommentManager
 {
-    
+
     /**
      * set status for adding comment
      * @see extension/ezcomments/classes/ezcomCommentManager#beforeAddingComment($comment, $user, $notification)
@@ -74,6 +74,15 @@ class ezcomCommentCommonManager extends ezcomCommentManager
      * @see extension/ezcomments/classes/ezcomCommentManager#afterDeletingComment($comment)
      */
     public function afterDeletingComment( $comment )
+    {
+        return true;
+    }
+
+    /**
+     * Placeholder for afterValidatingComment hook
+     * @see extension/ezcomments/classes/ezcomCommentManager#afterValidatingComment(\ezcomComment $comment)
+     */
+    public function afterValidatingComment( \ezcomComment $comment )
     {
         return true;
     }

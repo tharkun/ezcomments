@@ -11,6 +11,18 @@
         <source>Comments list</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Waiting comments list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Validated comments list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleted comments list</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>design/admin/parts/user/menu</name>
@@ -401,6 +413,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>IP address</source>
         <translation type="unfinished"></translation>
     </message>
@@ -410,6 +426,10 @@
     </message>
     <message>
         <source>Remove selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Validate selected</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -590,6 +610,48 @@
     <name>ezcomments/ezwebin/user/edit</name>
     <message>
         <source>My comment settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ezcomments/comment/status</name>
+    <message>
+        <source>Waiting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Validated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deleted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ezcomments/comment/validatecomments</name>
+    <message>
+        <source>Validate comments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confirm comments validation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you want to validate selected comments?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

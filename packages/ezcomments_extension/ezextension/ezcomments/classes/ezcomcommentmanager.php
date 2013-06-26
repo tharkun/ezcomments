@@ -36,7 +36,7 @@ abstract class ezcomCommentManager
      * action after adding comment
      * @param $comment
      * @return true if action succeeds
-     *        
+     *
      */
     public function afterAddingComment( $comment, $notification )
     {
@@ -48,7 +48,7 @@ abstract class ezcomCommentManager
      * @param $comment
      * @param $notified
      * @return true if action succeeds
-     *        
+     *
      */
     public function beforeUpdatingComment( $comment, $notified, $time )
     {
@@ -70,10 +70,21 @@ abstract class ezcomCommentManager
     /**
      * action after deleting comment
      * @param $comment
-     * true if action succeeds
+     * @return true if action succeeds
      *        string if the action has error
      */
     public function afterDeletingComment( $comment )
+    {
+        return true;
+    }
+
+    /**
+     * action after validating comment
+     * @param $comment
+     * @return true if action succeeds
+     *        string if the action has error
+     */
+    public function afterValidatingComment( \ezcomComment $comment )
     {
         return true;
     }
@@ -140,13 +151,29 @@ abstract class ezcomCommentManager
     }
 
     /**
+     * validate comment.
+     * @param ezcomComment $comment
+     * @return bool
+     */
+    public function validateComment( \ezcomComment $comment )
+    {
+        $comment->setAttribute('status', 1);
+        $comment->store();
+
+        $result = $this->afterValidatingComment( $comment );
+        return $result;
+    }
+
+
+    /**
      * delete comment. Based on the settings, judge if deleting the subscription if all the comments have been deleted.
      * @param $commentID
      * @return
      */
     public function deleteComment( $comment )
     {
-        $comment->remove();
+        $comment->setAttribute('status', 2);
+        $comment->store();
 
         $result = $this->afterDeletingComment( $comment );
         return $result;
